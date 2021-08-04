@@ -150,9 +150,9 @@ SELECT * from retirement_info;
 -- Retirements from Sales
 SELECT ri.emp_no, ri.first_name, ri.last_name, d.dept_name
 FROM retirement_info as ri
-WHERE d.dept_name = "Sales"
-LEFT JOIN dept_emp as de
+-- WHERE d.dept_name = "Sales"
+INNER JOIN dept_emp as de
 ON (ri.emp_no = de.emp_no)
-LEFT JOIN departments AS d
+INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
